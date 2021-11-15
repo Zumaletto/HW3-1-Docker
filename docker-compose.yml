@@ -1,12 +1,12 @@
 version: '3.7'
 services:
-  mysql:
+  db:
     image: postgresql:12-alpine3.14
     ports:
       - '3306:3306'
     volumes:
-      - ./data:/var/lib/postgresql
+      - ./data:/var/lib/postgresql/data
     environment:
-      - MYSQL_DATABASE=app
-      - MYSQL_USER=app
-      - MYSQL_PASSWORD=9mREsvXDs9Gk89Ef
+      - MYSQL_DB=app_db
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
